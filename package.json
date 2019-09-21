@@ -1,0 +1,24 @@
+{
+  "name": "event-management-system",
+  "version": "1.0.0",
+  "description": "An event management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GowthamHN/Event-Management-System.git"
+  },
+  "author": "GowthamHN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GowthamHN/Event-Management-System/issues"
+  },
+  "homepage": "https://github.com/GowthamHN/Event-Management-System#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
