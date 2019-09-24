@@ -59,15 +59,18 @@ app.post('/register',urlencodedParser, function(req, res){
 
 //Checking if the user EXISTS
 
-app.post('/login', urlencodedParser, function(req, res){
+app.post('/profile', urlencodedParser, function(req, res){
     sql = "select * from users where email = \'" + req.body.email  + "\' and password = \'" + req.body.pass + "\'" ;
-    console.log(sql);
-    result = con.query(sql, function(err){
+//    console.log(sql);
+    con.query(sql, function(err, result){
       if (err) throw err;
-    });
     //console.log(res);
-    if(result)
-      res.render('dashboard');
+      if(result.length == 0){
+        res.render('index');
+      }
+      else if(result.length != 0)
+        res.render('profile');
+    });
 });
 
 
