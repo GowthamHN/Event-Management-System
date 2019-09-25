@@ -17,6 +17,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
@@ -55,7 +57,13 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
-					</div>
+					</div><br>
+
+					<%if (msg!=""){%>
+						<div class="alert alert-danger">
+					    Invalid EmailID or Password! Please try again.
+					 	</div>
+					<%}%>
 
 					<div class="text-center p-t-136">
 						<a class="txt2" href="/register">

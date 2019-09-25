@@ -37,7 +37,7 @@ app.use(express.static('public'));
 
 //server routines
 app.get('/login',function(req,res){
-  res.render('index');
+  res.render('index',{msg:""});
 });
 
 app.get('/register', function(req, res){
@@ -66,7 +66,8 @@ app.post('/profile', urlencodedParser, function(req, res){
       if (err) throw err;
     //console.log(res);
       if(result.length == 0){
-        res.render('index');
+        var error = "Invalid EmailID or Password! Please try again.";
+        res.render('index',{msg: error});
       }
       else if(result.length != 0)
         res.render('profile');
